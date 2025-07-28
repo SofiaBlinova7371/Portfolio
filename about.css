@@ -1,0 +1,115 @@
+/* RESET & BASE */
+* {
+    margin: 0;
+    padding: 0;
+    color: #FEFEFE;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+@font-face {
+    font-family: "PPNeueMontreal-Medium";
+    src: url("PPNeueMontreal-Medium.otf");
+}
+
+@font-face {
+    font-family: "PPNeueMontreal-Italic";
+    src: url("PPNeueMontreal-Italic.otf");
+}
+
+/* TYPOGRAPHY */
+
+strong {
+    text-transform: uppercase;
+}
+
+h3 {
+    font-family: PPNeueMontreal-Medium;
+    font-size: 1.4rem;
+    font-weight: 200;
+    text-transform: uppercase;
+    line-height: 1.6rem;
+    margin-bottom: 1rem;
+    white-space: nowrap;
+}
+
+p, a {
+    font-family: PPNeueMontreal-Medium;
+    font-size: 1.4rem;
+    font-weight: 200;
+    line-height: 1.8rem;
+    text-decoration: none;
+    color: #FEFEFE;
+}
+
+/* WINDOW SET-UP */
+
+.about {
+    width: 30vw;
+    height: 100vh;
+    padding-left: 2rem;
+    margin: 0;
+    background-color: #000;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+}
+
+.about_info {
+    grid-column: 1 / span 3;
+    margin-top: 8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+}
+
+/* MENU ICON */
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    grid-column: 1;
+    margin-top: 2rem;
+}
+
+.circle_menu {
+    background-color: #FEFEFE;
+    border-radius: 100%;
+    width: 1rem;
+    height: 1rem;
+}
+
+/* RESUME */
+
+#resume {
+    margin: 0;
+}
+
+/* LOGOS */
+
+.logos {
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+    justify-content: start;
+    width: fit-content;
+    height: fit-content;
+    margin-top: 3rem;
+}
+
+.logo {
+    height: 5rem;
+    width: auto;
+    object-fit: contain;
+    width: 100%;
+}
+
+/* CONTACTS */
+
+.contacts div {
+    margin-bottom: 2rem;
+}

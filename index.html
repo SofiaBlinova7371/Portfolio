@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Home Page</title>
+</head>
+<body>
+    <div id="custom-cursor"></div>
+
+    <div class="header">
+        <a href="index.html" id="back"><h2><strong>Sofia Blinova</strong></h2></a>
+        <div class="menu">
+            <div class="circle_menu"></div>
+            <div class="circle_menu"></div>
+            <div class="circle_menu"></div>
+        </div>
+    </div>
+    <div class="hero">
+        <div class="hero_block">
+            <img class="hero_preview visible" id="preview-1" src="quote.jpg" />
+            <img class="hero_preview" id="preview-2" src="catalogue.jpg" />
+            <img class="hero_preview" id="preview-3" src="Axles/cover.jpg" />
+
+            <div class="circles">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div>
+        </div>
+    </div>
+    <div class="section filter">
+        <h2 class="scroll-to-filter"><strong>Projects</strong></h2>
+        <div class="filter_options">
+            <a href="" class="featured">
+                featured
+            </a>
+            <a href="" class="art_direction">
+                art direction
+            </a>
+            <a href="" class="editorial">
+                editorial
+            </a>
+            <a href="" class="branding">
+                branding
+            </a>
+            <a href="" class="motion_graphics">
+                motion graphics
+            </a>
+        </div>
+    </div>
+    <div class="projects">
+        <a class="card featured editorial art_direction motion_graphics" href="Axles.html">
+            <div class="project_img">
+                <img class="card_img" src="Axles/cover.jpg"/>
+            </div>
+            <div class="project_name">
+                <h3>Axles & Spokes</h3>
+                <img class="arrow" src="arrow.svg">
+            </div>
+        </a>
+        <a class="card featured editorial branding" href="Flavor.html">
+            <div class="project_img">
+                <video class="card_img" autoplay loop muted><source src="Flavor/Logo_cover.mp4" type="video/mp4"></video>
+            </div>
+            <div class="project_name">
+                <h3>Flavor Atlas</h3>
+                <img class="arrow" src="arrow.svg">
+            </div>
+        </a>
+        <a class="card featured editorial" href="Solace.html">
+            <div class="project_img">
+                <img class="card_img" src="Solace/Cover.jpg"/>
+            </div>
+            <div class="project_name">
+                <h3>Solace</h3>
+                <img class="arrow" src="arrow.svg">
+            </div>
+        </a>
+        <a class="card featured motion_graphics" href="Phillips.html">
+            <div class="project_img">
+                <img class="card_img" src="Phillips/Philips_card_cover.gif"/>
+            </div>
+            <div class="project_name">
+                <h3>Phillips</h3>
+                <img class="arrow" src="arrow.svg">
+            </div>
+        </a>
+        <a class="card featured editorial art_direction motion_graphics" href="Erazed.html">
+            <!-- <div class="project_img">
+                <img class="card_img" src="Erazed in the Grid/Erazed Animation.mp4"/>
+            </div> -->
+            <div class="project_img">
+                <video class="card_img" autoplay loop muted><source src="Erazed in the Grid/Erazed Animation.mp4" type="video/mp4"></video>
+            </div>
+            <div class="project_name">
+                <h3>Erazed in the Grid</h3>
+                <img class="arrow" src="arrow.svg">
+            </div>
+        </a>
+    </div>
+
+
+    <script src="page.js"></script>
+    <script src="hero-preview.js"></script>
+    <script src="cursor.js"></script>
+    <script src="about.js"></script>
+    <script src="filters.js"></script>
+    <script src="footer.js"></script>
+    <script src="slide-in.js"></script>
+</body>
+</html>
