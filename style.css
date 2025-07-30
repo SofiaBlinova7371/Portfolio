@@ -235,6 +235,16 @@ ul {
 
 /* FILTER */
 
+.desktop-filter {
+    display: flex;
+    gap: 2rem;
+}
+
+#filterDropdown {
+  display: none;
+}
+
+
 .filter {
     margin-top: 6rem;
     margin-bottom: 8rem;
@@ -277,6 +287,15 @@ ul {
     align-items: center;
     gap: 1rem;
     cursor: pointer;
+}
+
+.menu_about {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    grid-column: 1;
+    margin-top: 2rem;
 }
 
 .circle_menu {
@@ -454,4 +473,137 @@ h2 {
 .footer {
     margin-top: 8rem;
     margin-bottom: 6rem;
+}
+
+
+/* MOBILE ADAPTATION */
+
+@media only screen and (max-width: 800px) {
+
+#custom-cursor {
+    display: none;
+}
+
+/* FILTERS */
+
+.desktop-filter {
+    display: none;
+}
+
+#filterDropdown {
+    display: block;
+    font-family: PPNeueMontreal-Medium;
+    color: #fefefe;
+    font-size: 1.4rem;
+    padding: 0.5rem;
+    background-color: #0000;
+    border: 1px solid, #fefefe;
+    width: 90%;
+}
+
+.mobile-filter {
+    display: block;
+    grid-column: 7 / span 6;
+    grid-row: 1;
+}
+
+
+/* SECTIONS */
+
+.section {
+    margin: 0 1rem;
+    row-gap: 4rem;
+}
+
+.info {
+    margin-top: 8rem;
+    margin-bottom: 4rem;
+}
+
+.info .description {
+    grid-row: 2;
+}
+
+.full, .half, .third, .quarter {
+    grid-column: 1 / span 12; 
+}
+
+.card {
+    grid-column: span 12;
+}
+
+/* HEADER */
+
+.header {
+    display: flex;
+    align-items: center;
+    margin: 3rem 1rem 6rem 1rem;
+    width: calc(100vw - 2rem);
+}
+
+.menu {
+    margin-top: 0;
+    margin-right: 1rem;
+}
+
+.menu_about {
+    margin-top: 4rem;
+}
+
+/* SECTIONS LAYOUT */
+
+.intro {
+    margin-bottom: 6rem;
+}
+
+h1, h2 {
+  grid-column: 1 / span 12; 
+  grid-row: 1;
+  white-space: wrap;
+}
+
+.button {
+  grid-column: 1 / span 12;
+  grid-row: 3;
+}
+
+.quote {
+  grid-column: 1 / span 12;
+  grid-row: 2;
+  white-space: wrap;
+}
+
+.categories {
+  grid-column: 1 / span 6;
+  grid-row: 4;
+}
+
+.scope {
+  grid-column: 6 / span 6;
+  grid-row: 4;
+}
+
+.scope li {
+    white-space: wrap;
+}
+
+.description {
+  grid-column: 1 / span 12;
+  grid-row: 3;
+}
+
+
+/* FOOTER */
+.back {
+    grid-column: 1 / span 4; 
+}
+
+.links {
+    grid-column: 6 / span 7; 
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
 }

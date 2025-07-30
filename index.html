@@ -32,23 +32,25 @@
     </div>
     <div class="section filter">
         <h2 class="scroll-to-filter"><strong>Projects</strong></h2>
-        <div class="filter_options">
-            <a href="" class="featured">
-                featured
-            </a>
-            <a href="" class="art_direction">
-                art direction
-            </a>
-            <a href="" class="motion_graphics">
-                motion graphics
-            </a>
-            <a href="" class="branding">
-                branding
-            </a>
-            <a href="" class="editorial">
-                editorial
-            </a>
-        </div>
+            <!-- Desktop filters -->
+            <div class="filter_options desktop-filter">
+                <a href="" class="featured">featured</a>
+                <a href="" class="art_direction">art direction</a>
+                <a href="" class="motion_graphics">motion graphics</a>
+                <a href="" class="branding">branding</a>
+                <a href="" class="editorial">editorial</a>
+            </div>
+
+            <!-- Mobile dropdown -->
+            <div class="filter_options mobile-filter">
+                <select id="filterDropdown">
+                    <option value="featured">Featured</option>
+                    <option value="art_direction">Art Direction</option>
+                    <option value="motion_graphics">Motion Graphics</option>
+                    <option value="branding">Branding</option>
+                    <option value="editorial">Editorial</option>
+                </select>
+            </div>
     </div>
     <div class="projects">
         <a class="card featured editorial art_direction" href="Axles.html">

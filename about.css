@@ -67,7 +67,7 @@ p, a {
 
 /* MENU ICON */
 
-.menu {
+.menu_about {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -118,4 +118,25 @@ p, a {
 
 .contacts div {
     margin-bottom: 2rem;
+}
+
+/* MOBILE */
+
+@media only screen and (max-width: 800px) {
+
+.about {
+    width: 100vw;
+    height: 100vh;
+    padding-left: 2rem;
+    margin: 0;
+    background-color: #000;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+}
+
+.about_info {
+    grid-column: 1 / span 11;
+}
+
 }

@@ -19,7 +19,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     document.body.appendChild(darkOverlay);
 
-    // Dynamically load about.css once
     function loadAboutCSS() {
         if (!document.getElementById("aboutCSS")) {
             const link = document.createElement("link");
@@ -30,41 +29,52 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // Fetch and inject about.html
     fetch("about.html")
         .then(response => response.text())
         .then(html => {
             overlayContainer.innerHTML = html;
-            loadAboutCSS(); // Ensure CSS is injected only once
+            loadAboutCSS();
 
             const aboutMenu = overlayContainer.querySelector(".about");
-            Object.assign(aboutMenu.style, {
-                position: "fixed",
-                top: "0",
-                right: "-40vw",
-                width: "30vw",
-                height: "100vh",
-                zIndex: 20,
-                transition: "right 0.7s ease"
-            });
-
             const headerMenu = document.querySelector(".header .menu");
-            const closeMenu = aboutMenu.querySelector(".menu");
+            const closeMenu = aboutMenu.querySelector(".menu_about");
+
+            const isMobile = () => window.innerWidth <= 800;
+
+            function applyMenuStyles() {
+                Object.assign(aboutMenu.style, {
+                    position: "fixed",
+                    top: "0",
+                    right: isMobile() ? "-100vw" : "-40vw",
+                    width: isMobile() ? "100vw" : "30vw",
+                    height: "100vh",
+                    zIndex: 20,
+                    overflowY: isMobile() ? "auto" : "hidden",
+                    transition: "right 0.7s ease"
+                });
+            }
+
+            applyMenuStyles();
+            window.addEventListener("resize", applyMenuStyles);
 
             function openAbout() {
                 aboutMenu.style.right = "0";
                 darkOverlay.style.opacity = "1";
-                darkOverlay.style.pointerEvents = "auto";
+                darkOverlay.style.pointerEvents = isMobile() ? "none" : "auto";
             }
 
             function closeAbout() {
-                aboutMenu.style.right = "-40vw";
+                aboutMenu.style.right = isMobile() ? "-100vw" : "-40vw";
                 darkOverlay.style.opacity = "0";
                 darkOverlay.style.pointerEvents = "none";
             }
 
             headerMenu.addEventListener("click", openAbout);
             closeMenu.addEventListener("click", closeAbout);
-            darkOverlay.addEventListener("click", closeAbout);
+
+            // On desktop only, clicking outside closes
+            if (!isMobile()) {
+                darkOverlay.addEventListener("click", closeAbout);
+            }
         });
 });
