@@ -108,6 +108,12 @@ p, a {
     width: 100%;
 }
 
+.logo img {
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+}
+
 /* CONTACTS */
 
 .contacts div {
